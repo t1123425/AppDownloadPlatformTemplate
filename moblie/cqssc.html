@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="./ico.ico">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="address=no">
+    <title>重庆时时彩(App Download Platform Template)</title>
+    <script>
+      var xobj = new XMLHttpRequest();
+      xobj.overrideMimeType("application/json");
+      xobj.open('GET', './link.json', true);
+      xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+          var json = JSON.parse(xobj.responseText);
+          // console.log('json',json);
+          window.siteUrl = json.siteUrl;
+          window.download = json.downloadAppList;
+          window.downloadHelper = json.downloadIosHelper;
+          window.iosVerification = json.iosVerification;
+        }
+      };
+      xobj.send(null);
+      // 佳信客服SDK
+      (function(ji, a, x, i, n, c) {
+      ji[n] = ji[n] || function() {
+        (ji[n].n = ji[n].n || []).push(arguments);
+      };
+      j = a.createElement(x), s = a.getElementsByTagName(x)[0];
+      j.async = true;
+      if(typeof c==="function"){if(typeof document.attachEvent!=="object"){j.onload=function(){c()}}else{j.onreadystatechange=function(){var r=j.readyState;if(r==="loaded"||r==="complete"){j.onreadystatechange=null;c()}}}};
+      j.charset = "UTF-8";
+      j.src = i + "?v=" + new Date().getUTCDate() + "&id=mmnpddgza281nw&appName=d1943&appChannel=20001";
+      s.parentNode.insertBefore(j, s);
+    })(window, document, "script", "https://web.jiaxincloud.com/mcs.js", "_JIAXIN");_JIAXIN();
+    </script>
+</head>
+<body>
+    <noscript>
+      <strong>请打开javascript浏览我们的网站.</strong>
+      <strong>We're sorry but liuhe-site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      </noscript>
+      <div id="app"></div>
+</body>
+</html>
